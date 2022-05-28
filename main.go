@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 )
 
@@ -10,5 +11,6 @@ func main() {
 		w.Write([]byte("ok"))
 	})
 
+	log.Println("HttpServer starting..")
 	http.ListenAndServe(":12306", nil)
 }
